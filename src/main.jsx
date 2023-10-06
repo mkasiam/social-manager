@@ -5,11 +5,18 @@ import Root from "../src/components/layout/Root/Root";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import AuthProvider from "./components/provider/AuthProvider/AuthProvider";
+import Home from "./components/Home/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+    ],
   },
 ]);
 
