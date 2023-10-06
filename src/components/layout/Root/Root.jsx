@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Header from "../../shared/Header/Header"
+import Navbar from "../../Navbar/Navbar";
 const Root = () => {
     return (
         <div>
-            <Header></Header>
+            <Navbar></Navbar>
             <Outlet></Outlet>
         </div>
     );
