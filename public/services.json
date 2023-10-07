@@ -1,0 +1,56 @@
+[
+  {
+    "id": "WED123",
+    "name": "Elegant Weddings",
+    "image": "https://i.ibb.co/Nr98Xhq/wedding4.jpg",
+    "price": "$2,500",
+    "title": "Dream Wedding Experience",
+    "description": "Let us make your special day unforgettable with our comprehensive wedding planning service. From venue selection to floral arrangements, we've got it all covered.",
+    "category_name": "Weddings"
+  },
+  {
+    "id": "BDAY456",
+    "name": "Happy Moments",
+    "image": "https://i.ibb.co/v1jF9jw/birthday7.jpg",
+    "price": "$500",
+    "title": "Fun-filled Birthday Parties",
+    "description": "Throw the perfect birthday bash with our expert party planning. We handle everything from themes and decorations to entertainment and cake.",
+    "category_name": "Birthdays"
+  },
+  {
+    "id": "ANN789",
+    "name": "Love & Joy Events",
+    "image": "https://i.ibb.co/fMNnHRZ/annieversary3.jpg",
+    "price": "$1,200",
+    "title": "Memorable Anniversary Celebrations",
+    "description": "Celebrate your love story with elegance and style. Our anniversary celebration service takes care of every detail to make your day special.",
+    "category_name": "Anniversaries"
+  },
+  {
+    "id": "ENG101",
+    "name": "Engagement Elegance",
+    "image": "https://i.ibb.co/FWrsTQJ/engagement5.jpg",
+    "price": "$800",
+    "title": "Romantic Engagements",
+    "description": "Create a magical moment when you say 'Yes!' Let us plan your engagement with a touch of romance and sophistication.",
+    "category_name": "Engagements"
+  },
+  {
+    "id": "RET456",
+    "name": "Retirement Bliss",
+    "image": "https://i.ibb.co/Rp0Zs2t/retirement3.jpg",
+    "price": "$1,000",
+    "title": "Retirement Farewell",
+    "description": "Bid farewell to your working days in style. Our retirement planning service ensures a memorable transition into the next phase of life.",
+    "category_name": "Retirements"
+  },
+  {
+    "id": "BABY789",
+    "name": "Tiny Toes Celebrations",
+    "image": "https://i.ibb.co/4MSpJYR/babyshower.jpg",
+    "price": "$400",
+    "title": "Baby Shower Delight",
+    "description": "Welcome the newest member of the family with a joyous baby shower. We handle all the arrangements so you can focus on celebrating.",
+    "category_name": "Baby Showers"
+  }
+]
