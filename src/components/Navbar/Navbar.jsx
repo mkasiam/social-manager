@@ -60,8 +60,8 @@ const Navbar = () => {
           alt="User"
           className="w-8 h-8 rounded-full"
         />
-        <NavLink to="/login" className="ml-2 hover:text-blue-500">
-          Login
+        <NavLink to="/signIn" className="ml-2 hover:text-blue-500">
+          Sign In
         </NavLink>
       </div>
     </div>
