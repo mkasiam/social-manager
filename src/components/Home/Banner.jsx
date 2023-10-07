@@ -1,6 +1,7 @@
 const Banner = () => {
   return (
-    <div className="flex flex-col items-center py-8">
+    <div className="max-h-max flex items-center justify-center">
+      <div className="flex flex-col items-center py-24 ">
       <div className="mb-4">
         <img src="bannerImg.png" alt="" />
       </div>
@@ -18,6 +19,7 @@ const Banner = () => {
       <div className="flex gap-4 mt-4">
         <button className="btn btn-active btn-info rounded-md text-white font-bold">Book Now</button>
         <button className="btn btn-outline btn-info rounded-md">Our Services</button>
+      </div>
       </div>
     </div>
   );
