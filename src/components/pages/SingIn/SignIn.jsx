@@ -6,7 +6,7 @@ import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
 const SignIn = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { signInUser,signInWithGoogle } = useContext(AuthContext);
+  const { signInUser,signInWithGoogle} = useContext(AuthContext);
   const handleLogIn = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -15,7 +15,8 @@ const SignIn = () => {
     // Signing New User
     signInUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        const user = result.user;
+        console.log(user);
         //Navigate after user login
         navigate(location?.state ? location.state : "/");
       })
