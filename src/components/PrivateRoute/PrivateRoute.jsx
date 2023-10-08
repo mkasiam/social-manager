@@ -6,9 +6,8 @@ import PropTypes from 'prop-types';
 const PrivateRoute = ({children}) => {
     const {user,loading} = useContext(AuthContext);
     const location = useLocation();
-    console.log(location);
     if(loading){
-        return <span className="loading loading-dots loading-lg"></span>
+        return <span className="loading loading-dots loading-lg text-center py-14"></span>
     }
     if(user){
         return children;

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-const OurService = ({ singleService }) => {
-  const { name, image, price, description, category_name ,id} = singleService;
+const OurService = ({ aService }) => {
+  const { name, image, price, description, category_name ,id} = aService;
   return (
     <div className="bg-[#FFF] rounded-md">
       <div className="relative">
@@ -34,6 +34,6 @@ const OurService = ({ singleService }) => {
   );
 };
 OurService.propTypes = {
-  singleService: PropTypes.object.isRequired,
+  aService: PropTypes.object.isRequired,
 };
 export default OurService;

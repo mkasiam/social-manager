@@ -14,7 +14,7 @@ const Event = ({ aEvent }) => {
         <div className="hero-content text-center text-neutral-content">
           <div>
             <h1
-              className="text-5xl mb-5 text-[#ffffff] font-bold"
+              className="text-2xl md:text-3xl lg:text-5xl mb-5 text-[#ffffff] font-bold"
             >
               {title}
             </h1>

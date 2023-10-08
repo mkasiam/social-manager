@@ -6,7 +6,8 @@ import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
 const SignIn = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { signInUser,signInWithGoogle,signInWithGithub} = useContext(AuthContext);
+  const { signInUser, signInWithGoogle, signInWithGithub } =
+    useContext(AuthContext);
   const handleLogIn = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -19,27 +20,25 @@ const SignIn = () => {
         console.log(user);
         navigate(location?.state ? location.state : "/");
         e.target.reset();
-        //Navigate after user login
       })
       .catch((error) => console.error(error));
-    
   };
   const handleGoogleLogIn = () => {
     signInWithGoogle()
-    .then(result=>{
-      console.log(result.user)
-      navigate(location?.state ? location.state : "/");
-    })
-    .catch((error)=>console.error(error))
+      .then((result) => {
+        console.log(result.user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => console.error(error));
   };
-  const handleGithubLogIn = () =>{
+  const handleGithubLogIn = () => {
     signInWithGithub()
-    .then((result)=>{
-      navigate(location?.state ? location.state : "/");
-      console.log(result.user)
-    })
-    .catch((error)=>console.log(error))
-  }
+      .then((result) => {
+        navigate(location?.state ? location.state : "/");
+        console.log(result.user);
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <>
       <div className="border border-[#FFF] bg-[#FFF] rounded-md p-12 max-w-2xl mx-auto mt-7">
@@ -102,10 +101,7 @@ const SignIn = () => {
 
         <div className="flex items-center gap-4 mt-2">
           <h1 className="text-2xl font-bold">Also Continue with: </h1>
-          <button
-            onClick={handleGoogleLogIn}
-            className="btn btn-outline "
-          >
+          <button onClick={handleGoogleLogIn} className="btn btn-outline ">
             <FaGoogle></FaGoogle>Google
           </button>
           <button onClick={handleGithubLogIn} className="btn btn-outline">

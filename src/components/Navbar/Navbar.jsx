@@ -27,7 +27,7 @@ const Navbar = () => {
   );
   return (
     <div className="navbar bg-base-100">
-      <div className="navbar-start">
+      <div className="navbar-start gap-7">
         <div className="dropdown lg:hidden">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <svg
@@ -52,10 +52,14 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <div className="flex justify-center items-center gap-2">
-          <img src="logo.png" alt="" />
-          <h1 className="text-lg font-bold">Social Manager</h1>
-        </div>
+        <Link to="/">
+          <div className="flex justify-center items-center gap-2">
+            <img src="/logo.png" alt="" />
+            <h1 className="text-xl md:text-3xl lg:text-3xl text-[#333] font-bold">
+              Social Manager
+            </h1>
+          </div>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-lg font-semibold">
@@ -64,7 +68,6 @@ const Navbar = () => {
       </div>
       {/* Right side: User picture and login button */}
       <div className="navbar-end flex items-center">
-        
         <div>
           {user ? (
             <div className="dropdown dropdown-end">
@@ -78,9 +81,7 @@ const Navbar = () => {
                 className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <Link to="/profile">
-                    Profile
-                  </Link>
+                  <Link to="/profile">Profile</Link>
                 </li>
                 <li>
                   <a onClick={handleLogOut}>Logout</a>
