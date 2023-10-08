@@ -10,7 +10,7 @@ const Events = () => {
   }, []);
   console.log(events);
   return (
-    <div className="h-96 w-full carousel carousel-vertical rounded-box">
+    <div className="h-screen w-full carousel carousel-vertical rounded-box">
       {events.map((aEvent) => (
         <Event key={aEvent.id} aEvent={aEvent}></Event>
       ))}
