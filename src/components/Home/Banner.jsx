@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
     <div className="max-h-max flex items-center justify-center">
@@ -18,7 +20,7 @@ const Banner = () => {
       </div>
       <div className="flex gap-4 mt-4">
         <button className="btn btn-active btn-info rounded-md text-white font-bold">Book Now</button>
-        <button className="btn btn-outline btn-info rounded-md">Our Services</button>
+        <button className="btn btn-outline btn-info rounded-md"><Link to="/services">Our Services</Link></button>
       </div>
       </div>
     </div>

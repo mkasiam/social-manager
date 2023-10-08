@@ -3,7 +3,6 @@ import Service from "../Service/Service";
 
 const Services = () => {
   const services = useLoaderData();
-  console.log(services);
   return (
     <div>
       <div>

@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Service = ({ singleService }) => {
   const { image, title, description, id, price } = singleService;
@@ -22,7 +23,7 @@ const Service = ({ singleService }) => {
             Book Now
           </button>
           <button className="btn btn-outline btn-info rounded-md">
-            View Details
+            <Link to={`/serviceDetails/${id}`}>View Details</Link>
           </button>
         </div>
       </div>

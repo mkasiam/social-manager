@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 const OurService = ({ singleService }) => {
-  const { name, image, price, description, category_name } = singleService;
+  const { name, image, price, description, category_name ,id} = singleService;
   return (
     <div className="bg-[#FFF] rounded-md">
       <div className="relative">
@@ -25,7 +26,7 @@ const OurService = ({ singleService }) => {
           )}
         </p>
         <div className="flex justify-between items-center">
-          <button className="text-[#3ABFF8] underline">Know More</button>
+          <button className="text-[#3ABFF8] underline"><Link to={`/serviceDetails/${id}`}>Know More</Link></button>
           <p className="text-[#403F3F] text-2xl">{price}</p>
         </div>
       </div>
