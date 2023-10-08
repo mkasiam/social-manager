@@ -1,12 +1,9 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider/AuthProvider";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  // const {displayName,photoURL} = user;
-  // console.log(displayName);
-  // const {displayName,photoUrl} = user;
-  // console.log(displayName,photoUrl);
   const handleLogOut = () => {
     logOut()
       .then()
@@ -66,22 +63,30 @@ const Navbar = () => {
         </ul>
       </div>
       {/* Right side: User picture and login button */}
-      <div className="navbar-end flex items-center gap-3">
-        <div>
-          <img
-            src={user && user.photoURL} // Replace with the actual user picture URL
-            alt="User"
-            className="w-12 rounded-full"
-          />
-        </div>
+      <div className="navbar-end flex items-center">
+        
         <div>
           {user ? (
-            <button
-              onClick={handleLogOut}
-              className="btn btn-outline btn-info rounded-md"
-            >
-              Sign Out
-            </button>
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user && user.photoURL} />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <Link to="/profile">
+                    Profile
+                  </Link>
+                </li>
+                <li>
+                  <a onClick={handleLogOut}>Logout</a>
+                </li>
+              </ul>
+            </div>
           ) : (
             <NavLink
               to="/signIn"

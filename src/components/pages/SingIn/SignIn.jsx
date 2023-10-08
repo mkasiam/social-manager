@@ -6,7 +6,7 @@ import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
 const SignIn = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { signInUser,signInWithGoogle} = useContext(AuthContext);
+  const { signInUser,signInWithGoogle,signInWithGithub} = useContext(AuthContext);
   const handleLogIn = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -17,19 +17,29 @@ const SignIn = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        navigate("/")
+        navigate(location?.state ? location.state : "/");
         e.target.reset();
         //Navigate after user login
-        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => console.error(error));
     
   };
   const handleGoogleLogIn = () => {
     signInWithGoogle()
-    .then(result=>console.log(result.user))
+    .then(result=>{
+      console.log(result.user)
+      navigate(location?.state ? location.state : "/");
+    })
     .catch((error)=>console.error(error))
   };
+  const handleGithubLogIn = () =>{
+    signInWithGithub()
+    .then((result)=>{
+      navigate(location?.state ? location.state : "/");
+      console.log(result.user)
+    })
+    .catch((error)=>console.log(error))
+  }
   return (
     <>
       <div className="border border-[#FFF] bg-[#FFF] rounded-md p-12 max-w-2xl mx-auto mt-7">
@@ -98,7 +108,7 @@ const SignIn = () => {
           >
             <FaGoogle></FaGoogle>Google
           </button>
-          <button className="btn btn-outline">
+          <button onClick={handleGithubLogIn} className="btn btn-outline">
             <FaGithub></FaGithub>Github
           </button>
         </div>
