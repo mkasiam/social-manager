@@ -1,10 +1,37 @@
+import PropTypes from "prop-types";
 
-const Service = () => {
+const Service = ({ singleService }) => {
+  const { image, title, description, id, price } = singleService;
+
+  const flexDirectionClass =
+    id % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse";
+
   return (
-    <div>
-      <h1 className="text-2xl">I am service . I will be here anytime you call me.</h1>
+    <div className={`flex flex-col md:flex-col ${flexDirectionClass}`}>
+      <div className="flex-1">
+        <img className="w-full rounded-md shadow-md" src={image} alt="" />
+      </div>
+      <div className="flex-1 p-4">
+        <p className="text-xl md:text-2xl lg:text-3xl font-bold my-4">
+          {title}
+        </p>
+        <p className="text-lg text-[#333]">{description}</p>
+        <p className="text-[#403F3F] text-2xl my-2">Price: {price}</p>
+        <div className="flex gap-4 mt-4">
+          <button className="btn btn-active btn-info rounded-md text-white font-bold">
+            Book Now
+          </button>
+          <button className="btn btn-outline btn-info rounded-md">
+            View Details
+          </button>
+        </div>
+      </div>
     </div>
   );
+};
+
+Service.propTypes = {
+  singleService: PropTypes.object.isRequired,
 };
 
 export default Service;

@@ -81,7 +81,7 @@ const Register = () => {
               <div className="mt-6">
                 <button
                   type="submit"
-                  className="btn bg-[#403F3F] hover:bg-[#5f5e5e] text-white w-full rounded-md"
+                  className="btn bg-[#3ABFF8] hover:bg-[#7cbfdc] text-white w-full rounded-md"
                 >
                   Register
                 </button>

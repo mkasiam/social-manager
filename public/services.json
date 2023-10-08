@@ -1,56 +1,56 @@
 [
   {
-    "id": "WED123",
+    "id": 1,
     "name": "Elegant Weddings",
     "image": "https://i.ibb.co/Nr98Xhq/wedding4.jpg",
     "price": "$2,500",
     "title": "Dream Wedding Experience",
-    "description": "Let us make your special day unforgettable with our comprehensive wedding planning service. From venue selection to floral arrangements, we've got it all covered.",
+    "description": "Make your wedding day truly unforgettable with Elegant Weddings. Our comprehensive wedding planning service covers everything from selecting the perfect venue to exquisite floral arrangements and delightful culinary experiences. We collaborate with top-notch vendors to ensure no detail is overlooked. Let us handle the logistics so you can focus on celebrating love and creating cherished memories. Your dream wedding experience awaits!",
     "category_name": "Weddings"
   },
   {
-    "id": "BDAY456",
+    "id": 2,
     "name": "Happy Moments",
     "image": "https://i.ibb.co/v1jF9jw/birthday7.jpg",
     "price": "$500",
     "title": "Fun-filled Birthday Parties",
-    "description": "Throw the perfect birthday bash with our expert party planning. We handle everything from themes and decorations to entertainment and cake.",
-    "category_name": "Birthdays"
+    "description": "Happy Moments specializes in creating joyous and memorable birthday parties tailored to your unique style. We take care of everything, from theme selection to entertainment and decorations. Relax and enjoy the festivities while we handle all the planning and logistics. It's time to turn your birthday dreams into reality and create lasting memories with the ones you love.",
+    "category_name": "Birthday"
   },
   {
-    "id": "ANN789",
+    "id": 3,
     "name": "Love & Joy Events",
     "image": "https://i.ibb.co/VM3Yf0q/annieversary-main.jpg",
     "price": "$1,200",
     "title": "Memorable Anniversary Celebrations",
-    "description": "Celebrate your love story with elegance and style. Our anniversary celebration service takes care of every detail to make your day special.",
-    "category_name": "Anniversaries"
+    "description": "Celebrate your love story with elegance and style. Love & Joy Events takes care of every detail to make your anniversary special. From selecting the perfect venue to crafting a romantic ambiance, we leave no stone unturned. Let us create an unforgettable anniversary celebration for you.",
+    "category_name": "Anniversary"
   },
   {
-    "id": "ENG101",
+    "id": 4,
     "name": "Engagement Elegance",
     "image": "https://i.ibb.co/FWrsTQJ/engagement5.jpg",
     "price": "$800",
     "title": "Romantic Engagements",
-    "description": "Create a magical moment when you say 'Yes!' Let us plan your engagement with a touch of romance and sophistication.",
-    "category_name": "Engagements"
+    "description": "Engagement Elegance adds a touch of romance and sophistication to your special day. From selecting the perfect venue to crafting a delightful menu, we ensure your engagement is truly memorable. Create a magical moment when you say 'Yes!' with Engagement Elegance.",
+    "category_name": "Engagement"
   },
   {
-    "id": "RET456",
+    "id": 5,
     "name": "Retirement Bliss",
     "image": "https://i.ibb.co/Rp0Zs2t/retirement3.jpg",
     "price": "$1,000",
     "title": "Retirement Farewell",
-    "description": "Bid farewell to your working days in style. Our retirement planning service ensures a memorable transition into the next phase of life.",
-    "category_name": "Retirements"
+    "description": "Bid farewell to your working days in style with Retirement Bliss. We help you transition into retirement with a memorable celebration. Whether you prefer a relaxed gathering or a grand farewell party, we tailor our services to your preferences.",
+    "category_name": "Retirement"
   },
   {
-    "id": "BABY789",
+    "id": 6,
     "name": "Tiny Toes Celebrations",
     "image": "https://i.ibb.co/4MSpJYR/babyshower.jpg",
     "price": "$400",
     "title": "Baby Shower Delight",
-    "description": "Welcome the newest member of the family with a joyous baby shower. We handle all the arrangements so you can focus on celebrating.",
-    "category_name": "Baby Showers"
+    "description": "Welcome the newest member of your family with a joyous baby shower by Tiny Toes Celebrations. We handle all the arrangements so you can focus on celebrating this special time. From charming themes to delectable treats, let us make your baby shower a delightful experience.",
+    "category_name": "Baby Shower"
   }
 ]

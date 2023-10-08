@@ -5,7 +5,7 @@ const OurService = ({ singleService }) => {
     <div className="bg-[#FFF] rounded-md">
       <div className="relative">
         <img
-          className="rounded-md"s
+          className="rounded-md"
           src={image}
           alt={`Image not found of ${name}`}
         />

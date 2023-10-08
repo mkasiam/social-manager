@@ -22,26 +22,26 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path:"/about",
-        element:<AboutUs></AboutUs>
+        path: "/about",
+        element: <AboutUs></AboutUs>,
       },
       {
-        path:"/services",
-        element:<Services></Services>
+        path: "/services",
+        element: <Services></Services>,
+        loader: () => fetch("/services.json")
       },
       {
-        path:"/contact",
-        element:<Contact></Contact>,
-        
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
-        path:"/signIn",
-        element:<SignIn></SignIn>
+        path: "/signIn",
+        element: <SignIn></SignIn>,
       },
       {
-        path:"/register",
-        element:<Register></Register>
-      }
+        path: "/register",
+        element: <Register></Register>,
+      },
     ],
   },
 ]);

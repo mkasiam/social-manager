@@ -91,11 +91,11 @@ const SignIn = () => {
           <h1 className="text-2xl font-bold">Also Continue with: </h1>
           <button
             onClick={handleGoogleLogIn}
-            className="btn btn-outline btn-info "
+            className="btn btn-outline "
           >
             <FaGoogle></FaGoogle>Google
           </button>
-          <button className="btn btn-outline btn-info">
+          <button className="btn btn-outline">
             <FaGithub></FaGithub>Github
           </button>
         </div>
