@@ -6,7 +6,7 @@ const Banner = () => {
         <img src="bannerImg.png" alt="" />
       </div>
       <div className="text-center space-y-2">
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#2F55D4]">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-[#2F55D4]">
           One-Stop Social Event Management Hub
         </h1>
         <p className="text-lg text-[#333] ">

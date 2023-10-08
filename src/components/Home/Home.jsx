@@ -1,12 +1,12 @@
-import Services from "../pages/Services/Services";
 import Banner from "./Banner";
 import Events from "./Events";
+import OurServices from "./OurServices/OurServices";
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Services></Services>
+            <OurServices></OurServices>
             <Events></Events>
         </div>
     );
