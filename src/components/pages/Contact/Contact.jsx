@@ -9,12 +9,13 @@ import Swal from "sweetalert2";
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
+    e.target.reset();
     Swal.fire({
       position: "center",
       icon: "success",
       title: "Your message has been sent successfully",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 1500,
     });
   };
   return (
