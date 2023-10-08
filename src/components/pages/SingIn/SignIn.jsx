@@ -17,11 +17,13 @@ const SignIn = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate("/")
+        e.target.reset();
         //Navigate after user login
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => console.error(error));
-    e.target.reset();
+    
   };
   const handleGoogleLogIn = () => {
     signInWithGoogle()
