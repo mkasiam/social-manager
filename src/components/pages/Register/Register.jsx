@@ -54,6 +54,17 @@ const Register = () => {
                   required
                 />
               </div>
+              <div className="mb-4">
+                <label htmlFor="file" className="block text-gray-700">
+                  Choose a file:
+                </label>
+                <input
+                  type="file"
+                  name="file"
+                  id="file"
+                  className="border rounded px-2 py-1 w-full"
+                />
+              </div>
               <div>
                 <label className="text-md font-semibold text-[#403F3F]">
                   Email address
