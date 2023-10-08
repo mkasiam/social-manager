@@ -1,18 +1,33 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 const Register = () => {
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const { createUser } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
-    // const name = form.get("name");
-    // const photoUrl = form.get("photoUrl");
+    const name = form.get("name");
+    const photoUrl = form.get("photoUrl");
     const email = form.get("email");
     const password = form.get("password");
     createUser(email, password)
-      .then((result) => console.log("User created successfully", result.user))
+      .then((result) => {
+        const user = result.user;
+        updateProfile(user, {
+          displayName: name,
+          photoURL: photoUrl,
+        })
+          .then()
+          .catch((error) => {
+            const errorMessage = error.message;
+            setErrorMessage(errorMessage);
+          });
+        console.log("User created successfully", user);
+      })
       .catch((error) => console.error(error));
 
     e.target.reset();
@@ -52,17 +67,6 @@ const Register = () => {
                   name="photoUrl"
                   className="input input-bordered w-full rounded-md"
                   required
-                />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="file" className="block text-gray-700">
-                  Choose a file:
-                </label>
-                <input
-                  type="file"
-                  name="file"
-                  id="file"
-                  className="border rounded px-2 py-1 w-full"
                 />
               </div>
               <div>
