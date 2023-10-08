@@ -9,12 +9,11 @@ const OurServices = () => {
         .then(data=>setOurServices(data))
     },[])
   return (
-    <div>
-      <div className="text-center">
-        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">Our services</h1>
+    <div className="py-4">
+      <div className="text-center space-y-2">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">Discover Our Comprehensive Services</h1>
         <p className="text-lg text-[#333]">
-          Close your eyes and picture the experience of your dreams. Relaxation,
-          adventure, culture or romance, you can bring it to life.
+          Tailored Solutions to Meet Your Unique Needs and Enhance Your Experience
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-4">

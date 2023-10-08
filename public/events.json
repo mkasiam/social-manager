@@ -1,22 +1,27 @@
 [
   {
     "id": 1,
-    "image": "https://i.ibb.co/59s3NNt/rsz-wedding.jpg"
+    "image": "https://i.ibb.co/59s3NNt/rsz-wedding.jpg",
+    "title": "Elegant Weddings"
   },
   {
     "id": 2,
-    "image": "https://i.ibb.co/YL1jZms/rsz-retirement.jpg"
+    "image": "https://i.ibb.co/YL1jZms/rsz-retirement.jpg",
+    "title": "Retirement Farewell"
   },
   {
     "id": 3,
-    "image": "https://i.ibb.co/xYJFCTm/rsz-engagement.jpg"
+    "image": "https://i.ibb.co/xYJFCTm/rsz-engagement.jpg",
+    "title": "Romantic Engagements"
   },
   {
     "id": 4,
-    "image": "https://i.ibb.co/5hNc9xh/rsz-birthday.jpg"
+    "image": "https://i.ibb.co/5hNc9xh/rsz-birthday.jpg",
+    "title": "Fun-filled Birthday Parties"
   },
   {
     "id": 5,
-    "image": "https://i.ibb.co/Hgcg2sM/rsz-annieversary-1.jpg"
+    "image": "https://i.ibb.co/Hgcg2sM/rsz-annieversary-1.jpg",
+    "title": "Memorable Anniversary Celebrations"
   }
 ]

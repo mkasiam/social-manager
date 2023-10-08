@@ -26,7 +26,7 @@ const OurService = ({ singleService }) => {
           )}
         </p>
         <div className="flex justify-between items-center">
-          <button className="text-[#3ABFF8] underline"><Link to={`/serviceDetails/${id}`}>Know More</Link></button>
+          <button className="text-[#3ABFF8] underline font-bold text-lg"><Link to={`/serviceDetails/${id}`}>Know More</Link></button>
           <p className="text-[#403F3F] text-2xl">{price}</p>
         </div>
       </div>
