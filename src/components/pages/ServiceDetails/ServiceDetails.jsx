@@ -6,7 +6,7 @@ const ServiceDetails = () => {
   const services = useLoaderData();
 
   const desiredDetails = services.find((details) => details.id === idInt);
-  const { image, title, description, name, price, category_name } =
+  const { image, title, description, name, price } =
     desiredDetails;
 
   return (
@@ -14,7 +14,7 @@ const ServiceDetails = () => {
       <div>
         <div className="relative">
           <div>
-            <img src={image} alt="" />
+            <img className="rounded-md" src={image} alt="" />
           </div>
           <div className="absolute bottom-0 bg-[#7D6F81] py-2  w-full">
             <p className="text-white  text-lg md:text-2xl lg:text-4xl text-center font-bold">

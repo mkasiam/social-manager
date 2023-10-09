@@ -1,7 +1,7 @@
 const AboutUs = () => {
   return (
-    <div className="bg-[#FFF] rounded-md p-3 ">
-      <h1 className="text-xl md:text-2xl lg:text-3xl font-bold my-4">About</h1>
+    <div className="bg-[#FFF] rounded-md p-3 my-6 ">
+      <h1 className="text-xl md:text-2xl lg:text-3xl text-center font-bold my-4">About</h1>
       <div className="space-y-7">
         <p className="text-lg text-[#333]">
           With a perfect blend of expertise and passion, Social Manager is the
