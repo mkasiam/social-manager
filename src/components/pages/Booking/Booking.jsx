@@ -21,7 +21,7 @@ const Booking = () => {
         Experience Extraordinary Events - Book Yours Today!
       </h1>
       <div>
-        <div className="border flex-1 bg-[#F2F3F5] rounded-md p-12 max-w-2xl mx-auto mt-7">
+        <div className="border bg-[#F2F3F5] rounded-md p-12 max-w-2xl mx-auto mt-7">
           <div className="w-full  space-y-4">
             <div>
               <form onSubmit={handleBooking} className="space-y-4">

@@ -55,7 +55,7 @@ const Navbar = () => {
         <Link to="/">
           <div className="flex justify-center items-center gap-2">
             <img src="/logo.png" alt="" />
-            <h1 className="text-xl md:text-3xl lg:text-4xl text-[#2F55D4] font-bold">
+            <h1 className="text-xl md:text-3xl lg:text-3xl text-[#2F55D4] font-bold">
               Social Manager
             </h1>
           </div>
