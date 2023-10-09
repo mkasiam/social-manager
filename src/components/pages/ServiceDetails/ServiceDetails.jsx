@@ -14,7 +14,7 @@ const ServiceDetails = () => {
       <Helmet>
         <title>Social Manager | Service Details</title>
       </Helmet>
-      <div>
+      <div data-aos="fade-down">
         <div className="relative">
           <div>
             <img className="rounded-md" src={image} alt="" />

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 const OurService = ({ aService }) => {
   const { name, image, price, description, category_name ,id} = aService;
   return (
-    <div className="bg-[#FFF] shadow-lg rounded-md">
+    <div className="bg-[#FFF] shadow-lg rounded-md" data-aos="fade-up"
+    data-aos-anchor-placement="bottom-bottom">
       <div className="relative">
         <img
           className="rounded-sm"

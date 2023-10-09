@@ -7,7 +7,7 @@ import Review from "./Review/Review";
 
 const Home = () => {
     return (
-        <div>
+        <div data-aos="fade-down">
             <Helmet>
                 <title>Social Manager | Home </title>
             </Helmet>

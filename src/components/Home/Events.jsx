@@ -10,7 +10,7 @@ const Events = () => {
   }, []);
   return (
     <div>
-          <div className="text-center my-4">
+          <div className="text-center my-4" data-aos="flip-up" >
             <h1 className="text-xl md:text-2xl lg:text-4xl font-bold my-4">Explore Our Latest Happenings</h1>
             <p className="text-lg mb-2 text-[#333]">
             Stay Updated with Our Exciting Events and Activities

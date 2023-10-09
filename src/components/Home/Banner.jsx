@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="max-h-max flex items-center justify-center">
+    <div className="max-h-max flex items-center justify-center"  data-aos="fade-up"
+    data-aos-delay="500">
       <div className="flex flex-col items-center py-10 md:py-14 lg:py-16 ">
       <div className="mb-4">
         <img src="bannerImg.png" alt="" />

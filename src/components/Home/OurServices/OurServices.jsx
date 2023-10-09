@@ -10,7 +10,7 @@ const OurServices = () => {
     },[])
   return (
     <div className="py-4">
-      <div className="text-center space-y-3 py-2">
+      <div className="text-center space-y-3 py-2" data-aos="flip-down">
         <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">Discover Our Comprehensive Services</h1>
         <p className="text-lg text-[#333]">
           Tailored Solutions to Meet Your Unique Needs and Enhance Your Experience

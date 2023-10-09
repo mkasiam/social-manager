@@ -9,10 +9,10 @@ const Service = ({ singleService }) => {
 
   return (
     <div className={`flex flex-col md:flex-col ${flexDirectionClass}`}>
-      <div className="flex-1">
+      <div className="flex-1" data-aos="flip-left" data-aos-duration="1500">
         <img className="w-full rounded-md shadow-md" src={image} alt="" />
       </div>
-      <div className="flex-1 p-4">
+      <div className="flex-1 p-4" data-aos="flip-right" data-aos-duration="1500">
         <p className="text-xl md:text-2xl lg:text-3xl font-bold my-4">
           {title}
         </p>
