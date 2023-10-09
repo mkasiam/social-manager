@@ -59,7 +59,7 @@ const SignIn = () => {
                   type="email"
                   placeholder="Enter your email address"
                   name="email"
-                  className="input input-bordered w-full rounded-md"
+                  className="input input-bordered bg-white w-full rounded-md"
                   required
                 />
               </div>
@@ -71,7 +71,7 @@ const SignIn = () => {
                   type="password"
                   placeholder="Enter your password"
                   name="password"
-                  className="input input-bordered w-full rounded-md"
+                  className="input input-bordered w-full bg-white rounded-md"
                   required
                 />
               </div>
@@ -89,7 +89,7 @@ const SignIn = () => {
               <div>
                 <p className="text-[#706F6F] text-lg">
                   Do not Have An Account ?
-                  <Link className="text-[#F75B5F]" to="/register">
+                  <Link className="text-[#FF0000] text-lg" to="/register">
                     {" "}
                     Register
                   </Link>{" "}

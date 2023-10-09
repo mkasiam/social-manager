@@ -3,9 +3,12 @@ import { Helmet } from "react-helmet-async";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import Swal from "sweetalert2";
 const Register = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const { createUser } = useContext(AuthContext);
   const handleRegister = (e) => {
     setSuccessMessage("");
@@ -16,7 +19,18 @@ const Register = () => {
     const photoUrl = form.get("photoUrl");
     const email = form.get("email");
     const password = form.get("password");
-    const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).*$/;
+    const passwordRegex =
+      /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).*$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+      setErrorMessage("Please Provide a valid email address");
+      return;
+    }else if (!passwordRegex.test(password)) {
+      setErrorMessage(
+        "password should contains at least one capital letter and one special character"
+      );
+      return;
+    }
     createUser(email, password)
       .then((result) => {
         const user = result.user;
@@ -24,10 +38,16 @@ const Register = () => {
           displayName: name,
           photoURL: photoUrl,
         })
-          .then((result)=>{
-            const name = result?.user?.displayName;
+          .then(() => {
             e.target.reset();
-            setSuccessMessage(`Registration Successful for ${name}`)
+            setSuccessMessage("Registration Successful");
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Your Registration is successfully done. Go to Log In",
+              showConfirmButton: false,
+              timer: 1500,
+            });
           })
           .catch((error) => {
             const errorMessage = error.message;
@@ -41,8 +61,6 @@ const Register = () => {
         setErrorMessage(errorMessage);
         return;
       });
-
-    
   };
   return (
     <>
@@ -51,7 +69,7 @@ const Register = () => {
           <title>Social Manager | Registration</title>
         </Helmet>
         <h1 className="text-3xl text-[#403F3F] font-semibold mb-4">
-          Register your account
+          Register Your Account
         </h1>
 
         <div className="w-full  space-y-4">
@@ -65,7 +83,7 @@ const Register = () => {
                   type="text"
                   placeholder="Enter Your Name"
                   name="name"
-                  className="input input-bordered w-full rounded-md"
+                  className="input input-bordered bg-white w-full rounded-md"
                   required
                 />
               </div>
@@ -77,7 +95,7 @@ const Register = () => {
                   type="text"
                   placeholder="Your Photo Url"
                   name="photoUrl"
-                  className="input input-bordered w-full rounded-md"
+                  className="input input-bordered bg-white w-full rounded-md"
                   required
                 />
               </div>
@@ -89,21 +107,31 @@ const Register = () => {
                   type="email"
                   placeholder="Enter your email address"
                   name="email"
-                  className="input input-bordered w-full rounded-md"
+                  className="input input-bordered w-full bg-white rounded-md"
                   required
                 />
               </div>
-              <div>
+              <div className="relative">
                 <label className="text-md font-semibold text-[#403F3F]">
                   Password
                 </label>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   placeholder="Enter your password"
                   name="password"
-                  className="input input-bordered w-full rounded-md"
+                  className="input input-bordered bg-white w-full rounded-md"
                   required
                 />
+                <span
+                  className="absolute right-5 bottom-4"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? (
+                    <AiFillEyeInvisible className="text-xl" />
+                  ) : (
+                    <AiFillEye className="text-xl" />
+                  )}
+                </span>
               </div>
               <div className="mt-5">
                 {successMessage && (
@@ -128,7 +156,7 @@ const Register = () => {
               <div>
                 <p className="text-[#706F6F] text-lg">
                   Have An Account ?
-                  <Link className="text-[#F75B5F]" to="/signIn">
+                  <Link className="text-[#FF0000] text-lg" to="/signIn">
                     {" "}
                     Sign In
                   </Link>{" "}
