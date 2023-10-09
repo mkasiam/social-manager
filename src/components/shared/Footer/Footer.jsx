@@ -2,7 +2,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-3 md:p-5 lg:p-7 bg-primary text-primary-content">
+    <footer className="footer footer-center p-3 md:p-5 lg:p-7 bg-[#51bae7] bg-text-primary-content">
       <aside>
         <img src="/logo.png" alt="" />
         <p className="font-bold text-xl md:text-2xl lg:text-3xl">
