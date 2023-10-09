@@ -8,12 +8,15 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const { createUser } = useContext(AuthContext);
   const handleRegister = (e) => {
+    setSuccessMessage("");
+    setErrorMessage("");
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
     const photoUrl = form.get("photoUrl");
     const email = form.get("email");
     const password = form.get("password");
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).*$/;
     createUser(email, password)
       .then((result) => {
         const user = result.user;
@@ -21,16 +24,25 @@ const Register = () => {
           displayName: name,
           photoURL: photoUrl,
         })
-          .then()
+          .then((result)=>{
+            const name = result?.user?.displayName;
+            e.target.reset();
+            setSuccessMessage(`Registration Successful for ${name}`)
+          })
           .catch((error) => {
             const errorMessage = error.message;
             setErrorMessage(errorMessage);
+            return;
           });
         console.log("User created successfully", user);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        const errorMessage = error.message;
+        setErrorMessage(errorMessage);
+        return;
+      });
 
-    e.target.reset();
+    
   };
   return (
     <>
@@ -92,6 +104,18 @@ const Register = () => {
                   className="input input-bordered w-full rounded-md"
                   required
                 />
+              </div>
+              <div className="mt-5">
+                {successMessage && (
+                  <p className="text-xl font-bold text-[#008000]">
+                    {successMessage}
+                  </p>
+                )}
+                {errorMessage && (
+                  <p className="text-xl font-bold text-[#FF0000]">
+                    {errorMessage}
+                  </p>
+                )}
               </div>
               <div className="mt-6">
                 <button

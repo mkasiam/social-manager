@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 const Booking = () => {
   const handleBooking = (e) => {
@@ -13,6 +14,9 @@ const Booking = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Social Manager | Booking</title>
+      </Helmet>
       <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-bold my-3">
         Experience Extraordinary Events - Book Yours Today!
       </h1>
