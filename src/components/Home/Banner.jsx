@@ -19,7 +19,7 @@ const Banner = () => {
         </p>
       </div>
       <div className="flex gap-4 mt-4">
-        <button className="btn btn-active btn-info rounded-md text-white font-bold">Book Now</button>
+        <button className="btn btn-active btn-info rounded-md text-white font-bold"><Link to="/booking">Book Now</Link></button>
         <button className="btn btn-outline btn-info rounded-md"><Link to="/services">Our Services</Link></button>
       </div>
       </div>

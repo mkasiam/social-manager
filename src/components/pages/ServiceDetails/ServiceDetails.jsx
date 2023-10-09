@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -6,8 +6,7 @@ const ServiceDetails = () => {
   const services = useLoaderData();
 
   const desiredDetails = services.find((details) => details.id === idInt);
-  const { image, title, description, name, price } =
-    desiredDetails;
+  const { image, title, description, name, price } = desiredDetails;
 
   return (
     <div>
@@ -27,7 +26,7 @@ const ServiceDetails = () => {
           <p className="text-lg text-[#333]">{description}</p>
           <p className="text-2xl font-bold text-[#201f1f]">Price:{price}</p>
           <button className="btn btn-outline w-full btn-info rounded-md text-white font-bold">
-            Book Now
+            <Link to="/booking">Book Now</Link>
           </button>
         </div>
       </div>

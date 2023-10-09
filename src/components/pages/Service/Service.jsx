@@ -20,7 +20,7 @@ const Service = ({ singleService }) => {
         <p className="text-[#403F3F] text-2xl my-2">Price: {price}</p>
         <div className="flex gap-4 mt-4">
           <button className="btn btn-active btn-info rounded-md text-white font-bold">
-            Book Now
+            <Link to="/booking">Book Now</Link>
           </button>
           <button className="btn btn-outline btn-info rounded-md">
             <Link to={`/serviceDetails/${id}`}>View Details</Link>
