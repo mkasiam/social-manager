@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const ServiceDetails = () => {
@@ -10,6 +11,9 @@ const ServiceDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Social Manager | Service Details</title>
+      </Helmet>
       <div>
         <div className="relative">
           <div>

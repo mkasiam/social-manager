@@ -6,6 +6,7 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +21,9 @@ const Contact = () => {
   };
   return (
     <div className="my-6">
+      <Helmet>
+        <title>Social Manager | Contact Us</title>
+      </Helmet>
       {/* Contact Us Section Title and subtitle */}
       <div className="text-center mt-6 py-10 md:py-16 lg:py-20 space-y-5 px-5">
         <h1 className="text-xl md:text-2xl lg:text-4xl text-[#3A3A3A] font-bold">
