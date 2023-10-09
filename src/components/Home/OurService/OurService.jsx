@@ -6,7 +6,7 @@ const OurService = ({ aService }) => {
     <div className="bg-[#FFF] shadow-lg rounded-md">
       <div className="relative">
         <img
-          className="rounded-md"
+          className="rounded-sm"
           src={image}
           alt={`Image not found of ${name}`}
         />

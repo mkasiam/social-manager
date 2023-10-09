@@ -3,12 +3,17 @@ import { Helmet } from "react-helmet-async";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
+import { useState } from "react";
+import Swal from "sweetalert2";
 const SignIn = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState("");
   const { signInUser, signInWithGoogle, signInWithGithub } =
     useContext(AuthContext);
+
   const handleLogIn = (e) => {
+    setErrorMessage("");
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
@@ -17,27 +22,68 @@ const SignIn = () => {
     signInUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        const name = user?.displayName;
         navigate(location?.state ? location.state : "/");
         e.target.reset();
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: `Successfully Login ${name}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode)
+        if (errorCode === 'auth/wrong-password') {
+          // Password doesn't match
+          setErrorMessage('Password doesn\'t match');
+        } else if (errorCode === 'auth/user-not-found') {
+          // Email doesn't match
+          setErrorMessage('Email doesn\'t match');
+        } else {
+          // Handle other errors
+          setErrorMessage(errorMessage);
+        }
+      });
   };
   const handleGoogleLogIn = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
+        const name = result?.user?.displayName;
         navigate(location?.state ? location.state : "/");
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: `Successfully Login ${name}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        const errorMessage = error.message;
+        setErrorMessage(errorMessage);
+      });
   };
   const handleGithubLogIn = () => {
     signInWithGithub()
       .then((result) => {
+        const name = result?.user?.displayName;
         navigate(location?.state ? location.state : "/");
-        console.log(result.user);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: `Successfully Login ${name}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        const errorMessage = error.message;
+        setErrorMessage(errorMessage);
+      });
   };
   return (
     <>
@@ -78,6 +124,13 @@ const SignIn = () => {
               <p className="underline cursor-pointer pl-2 mt-2">
                 Forgot password
               </p>
+              <div className="mt-5">
+                {errorMessage && (
+                  <p className="text-xl font-bold text-[#FF0000]">
+                    {errorMessage}
+                  </p>
+                )}
+              </div>
               <div className="mt-6">
                 <button
                   type="submit"

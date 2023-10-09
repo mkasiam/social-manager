@@ -19,15 +19,23 @@ const Register = () => {
     const photoUrl = form.get("photoUrl");
     const email = form.get("email");
     const password = form.get("password");
-    const passwordRegex =
-      /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).*$/;
+    const specialCharRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
+    const passwordCapitalCheck = /^(?=.*[A-Z]).+$/;
+
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
       setErrorMessage("Please Provide a valid email address");
       return;
-    }else if (!passwordRegex.test(password)) {
+    }else if(password.length < 6){
+      setErrorMessage("Password Should be 6 character or more");
+      return;
+    }else if(!passwordCapitalCheck.test(password)){
+      setErrorMessage("password should contains at least one capital letter or more");
+      return;
+    }
+    else if (!specialCharRegex.test(password)) {
       setErrorMessage(
-        "password should contains at least one capital letter and one special character"
+        "password should contains at least one special character or more"
       );
       return;
     }
@@ -54,7 +62,6 @@ const Register = () => {
             setErrorMessage(errorMessage);
             return;
           });
-        console.log("User created successfully", user);
       })
       .catch((error) => {
         const errorMessage = error.message;

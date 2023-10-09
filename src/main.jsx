@@ -15,6 +15,7 @@ import ServiceDetails from "./components/pages/ServiceDetails/ServiceDetails";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Profile from "./components/pages/Profile/Profile";
 import Booking from "./components/pages/Booking/Booking";
+import NotFound from "./components/pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -58,7 +59,11 @@ const router = createBrowserRouter([
       {
         path:"/booking",
         element:<PrivateRoute><Booking></Booking></PrivateRoute>
-      }
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>,
+      },
     ],
   },
 ]);

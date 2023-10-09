@@ -68,6 +68,9 @@ const Navbar = () => {
       </div>
       {/* Right side: User picture and login button */}
       <div className="navbar-end flex items-center">
+        <div className="hidden md:block lg:block mr-2">
+          <h1>{user && <p className="text-lg font-medium">{user.displayName}</p>}</h1>
+        </div>
         <div>
           {user ? (
             <div className="dropdown dropdown-end">

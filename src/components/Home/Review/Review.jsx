@@ -1,15 +1,13 @@
 const Review = () => {
   return (
-    <div className=" my-6">
+    <div className=" my-8">
       <div className="text-center">
+        <p className="text-[#3ABFF8] font-bold text-md md:text-lg lg:text-lg">CUSTOMER REVIEW</p>
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-          Customer Review
+        Discover Why Our Customers Are Smiling!
         </h1>
-        <p className="text-[#333] font-bold text-md md:text-lg lg:text-lg">
-          Discover Why Our Customers Are Smiling!
-        </p>
       </div>
-      <div className="hero">
+      <div className="hero my-5">
         <div className="hero-content flex-col-reverse lg:flex-row-reverse">
           <div className="w-full md:w-1/2 lg:w-1/2">
             <img

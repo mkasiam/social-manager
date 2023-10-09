@@ -2,12 +2,12 @@ import { FaBrain, FaClock, FaLightbulb, FaUserCircle } from "react-icons/fa";
 const ChooseUs = () => {
     
   return (
-    <div>
+    <div className="my-6">
       <div className="text-center">
+        <p className="text-[#3ABFF8] font-bold text-md md:text-lg lg:text-lg">WHY CHOOSE US </p>
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-           WHY CHOOSE US
+            For stress-free, personalized events
         </h1>
-        <p className="text-[#333] font-bold text-md md:text-lg lg:text-lg">Choose us for stress-free, personalized events that turn your vision into unforgettable memories</p>
       </div>
       {/* Why Choose Us Container  */}
       <div className="flex flex-col-reverse md:flex-row lg:flex-row gap-7 my-6">
