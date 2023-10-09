@@ -13,7 +13,7 @@ const Profile = () => {
         Profile
       </h1>
       <hr />
-      <div className="flex justify-center items-center my-6">
+      <div className="flex justify-center items-center my-6" data-aos="fade-down">
         <div className="bg-[#FFF] rounded-md shadow-md p-7 space-y-3">
           <div className="flex justify-center">
             <img className="rounded-full" src={user?.photoURL} alt="No Image Found" />

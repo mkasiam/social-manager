@@ -27,7 +27,7 @@ const Contact = () => {
       {/* Contact Us Section Title and subtitle */}
       <div
         className="text-center mt-6 py-10 md:py-16 lg:py-20 space-y-5 px-5"
-        data-aos="zoom-in-down" data-aos-duration="1500"
+        data-aos="fade-down"
       >
         <h1 className="text-xl md:text-2xl lg:text-4xl text-[#3A3A3A] font-bold">
           Contact
@@ -46,7 +46,7 @@ const Contact = () => {
       {/* Contact Us Container  */}
       <div className="flex flex-col md:flex-row lg:flex-row gap-7">
         {/* Contact Us Left Side (Information) */}
-        <div className="text-[#4b4f58] text-lg space-y-4 flex-1">
+        <div className="text-[#4b4f58] text-lg space-y-4 flex-1" data-aos="fade-right" data-aos-duration="1500">
           <p className="text-[#3ABFF8] font-bold text-lg">Contact Us</p>
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
             Get In Touch With Us
@@ -86,7 +86,7 @@ const Contact = () => {
         </div>
         {/* Form to contact  */}
 
-        <div className="border flex-1 bg-[#F2F3F5] rounded-md p-12 max-w-2xl mx-auto mt-7">
+        <div className="border flex-1 bg-[#F2F3F5] rounded-md p-12 max-w-2xl mx-auto mt-7" data-aos="fade-left"  data-aos-duration="1500">
           <div className="w-full  space-y-4">
             <div>
               <form onSubmit={handleSubmit} className="space-y-4">

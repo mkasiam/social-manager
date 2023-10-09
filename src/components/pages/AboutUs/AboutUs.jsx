@@ -7,7 +7,7 @@ const AboutUs = () => {
         <title>Social Manager | About Us</title>
       </Helmet>
       <h1 className="text-xl md:text-2xl lg:text-3xl text-center font-bold my-4">About</h1>
-      <div className="space-y-7" data-aos="zoom-in-down" data-aos-duration="1500">
+      <div className="space-y-7" data-aos="fade-down">
         <p className="text-lg text-[#333]">
           With a perfect blend of expertise and passion, Social Manager is the
           premier event management company in Bangladesh, dedicated to

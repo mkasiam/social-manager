@@ -13,12 +13,12 @@ const Service = ({ singleService }) => {
         <img className="w-full rounded-md shadow-md" src={image} alt="" />
       </div>
       <div className="flex-1 p-4">
-        <p className="text-xl md:text-2xl lg:text-3xl font-bold my-4">
+        <p className="text-xl md:text-2xl lg:text-3xl font-bold my-4"  data-aos="flip-down">
           {title}
         </p>
         <p className="text-lg text-[#333]">{description}</p>
         <p className="text-[#403F3F] text-2xl my-2">Price: {price}</p>
-        <div className="flex gap-4 mt-4">
+        <div className="flex gap-4 mt-4" data-aos="fade-down">
           <button className="btn btn-active btn-info rounded-md text-white font-bold">
             <Link to="/booking">Book Now</Link>
           </button>
