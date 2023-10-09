@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer:
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>In the provided code, there is a small mistake. Instead of using the variable name "greeting," "greetign" is mistakenly written. Because of this typo, when the code tries to log the "greetign" variable, it will result in a ReferenceError because the correct variable name should be "greeting".</i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>The code will produce a result of "12" (a string) .Because One is a number and another one is a string.It combines the number 1 with the string "2" because in JavaScript, when you use the + operator to add values, if one of the operands is a string, JavaScript performs string concatenation.</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i>Even though we change the info.favoriteFood to "🍝," it doesn't affect the original food array, as info.favoriteFood is a separate variable that holds a copy of the value from food[0]. The two variables, info.favoriteFood and food[0], are separate references to different values.</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>The correct answer is B because the sayHi function is called without passing any argument for the name parameter. In JavaScript, when a function is called with missing arguments, the missing parameters take the value of undefined. So, the resulting string will be "Hi there, undefined" in this case.</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>In the code you provided, you have a list of numbers like [0, 1, 2, 3]. The forEach loop looks at each number one by one.In the given code, the loop looks at each number in the list one by one. It checks if the number is not equal to zero, like asking "Is this number not zero?" For the numbers 1 and 2, the answer is "yes," so we add 1 to the count for each of them. In the end, we counted 2 numbers that weren't zero, so the result is 2.</i>
 
 </p>
 </details>
