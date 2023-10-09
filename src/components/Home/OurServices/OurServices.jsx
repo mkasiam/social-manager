@@ -16,7 +16,7 @@ const OurServices = () => {
           Tailored Solutions to Meet Your Unique Needs and Enhance Your Experience
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 my-6">
         {
             OurServices.map((aService)=><OurService key={aService.id} aService={aService}></OurService>)
         }

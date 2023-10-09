@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const OurService = ({ aService }) => {
   const { name, image, price, description, category_name ,id} = aService;
   return (
-    <div className="bg-[#FFF] rounded-md">
+    <div className="bg-[#FFF] shadow-lg rounded-md">
       <div className="relative">
         <img
           className="rounded-md"
